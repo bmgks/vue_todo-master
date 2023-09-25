@@ -1,4 +1,8 @@
 <template>
+<!--
+  指定したコンポーネントの使用
+  <appWrapper> <app-wrapper> どちらでも可
+-->
   <app-wrapper :todos="todos">
     <app-navi />
     <app-register
@@ -42,7 +46,7 @@
 
 <script>
 import axios from 'axios';
-
+//コンポーネントのインポート
 import Wrapper from 'TodoRouterDir/components/Wrapper/index.vue';
 import Navi from 'TodoRouterDir/components/Navi/index.vue';
 import { ErrorMessage, EmptyMessage } from 'TodoRouterDir/components/Message';
@@ -51,6 +55,7 @@ import List from 'TodoRouterDir/components/List/index.vue';
 
 export default {
   components: {
+    //コンポーネントとして使用するという指定
     appWrapper: Wrapper,
     appNavi: Navi,
     appErrorMessage: ErrorMessage,
